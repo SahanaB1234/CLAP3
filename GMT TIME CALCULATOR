@@ -1,4 +1,4 @@
-/*PRGRAM TO PRINT CURRENT TIME IN GMT FORMAT AND DATE*/
+/*PROGRAM TO PRINT CURRENT TIME IN GMT FORMAT AND DATE*/
 
 #include <time.h>//this header file is used to manupilate date and time 
 #include <stdlib.h> 
