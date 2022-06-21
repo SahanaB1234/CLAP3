@@ -1,4 +1,4 @@
-/*PROGRAM TO PRINT CURRENT TIME IN GMT FORMAT AND DATE*/
+/*PROGRAM TO PRINT CALENDAR OF A GIVEN MONTH*/
 
 #include<stdio.h> // include stdio.h library 
  
