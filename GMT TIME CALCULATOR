@@ -1,20 +1,48 @@
 /*PROGRAM TO PRINT CURRENT TIME IN GMT FORMAT AND DATE*/
 
-#include <time.h>//this header file is used to manupilate date and time 
-#include <stdlib.h> 
-#include <stdio.h> 
+#include<stdio.h> // include stdio.h library 
  
-int main() { 
+int main(void) 
+{        
  
-    time_t current_time; 
-    char* c_time_string; 
+    int day, mon, year; 
  
-    current_time = time(NULL); 
+    char *months[] = { 
+                        "January", "February", "March", "April", 
+                        "May", "June", "July", "August",  
+                        "September", "October", "November", "December", 
+                      }; 
  
-    /* Convert to local time format. */ 
-    c_time_string = ctime(&current_time); 
+    printf("Enter date(MM/DD/YYY): "); 
+    scanf("%d/%d/%d", &mon, &day, &year); 
  
-    printf("Current time is %s", c_time_string); 
+    printf("%d", day); 
+ 
+    // if day is 1 or 21 or 31, add the suffix "st" 
+    if(day == 1 || day == 21 || day == 31) 
+    { 
+        printf("st "); 
+    } 
+ 
+    // if day is 2 or 22, add the suffix "nd" 
+    else if(day == 2 || day == 22) 
+    { 
+        printf("nd "); 
+    } 
+ 
+    // if day is 3 or 23, add the suffix "rd" 
+    else if(day == 3 || day == 23) 
+    { 
+        printf("rd "); 
+    } 
+ 
+    // for everything else add the suffix "th" 
+    else 
+    { 
+        printf("th "); 
+    }     
+ 
+    printf("%s, %d", months[mon - 1], year); 
  
     return 0; 
 }
